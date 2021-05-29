@@ -1,0 +1,47 @@
+{
+  "namespace": "play",
+
+  "test6": {
+    "type": "button",
+    "size": ["50% - 200px", 100],
+    "anchor_from": "bottom_right",
+    "offset": [0, 0],
+    "button_mappings": [
+      {
+        "from_button_id": "button.button_0",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.button_0",
+        "to_button_id": "button.console_log_test1",
+        "mapping_type": "double_pressed"
+      }
+    ],
+    "visible": true,
+    "controls": [
+      {
+        "subtext0": {
+          "type": "custom",
+          "renderer": "fill",
+          "color": "gray"
+        }
+      },
+      {
+        "subtest1": {
+          "type": "label",
+          "text": "Back",
+          "shadow": true,
+          "shadow_color": "red",
+          "font_type": "sans-serif",
+          "color": [1.0, 1.0, 1.0]
+        }
+      }
+    ]
+  },
+
+  "splashes_0": {
+    "type": "custom",
+    "renderer": "splash_text_renderer"
+  }
+}

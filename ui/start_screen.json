@@ -1,0 +1,279 @@
+{
+  "namespace": "start",
+
+  "text_panel": {
+    "type": "panel",
+    "size": [ "100% - 2px", 10],
+    "offset": [0, -12],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "copyright": {
+          "type": "label",
+          "color": "$main_header_text_color",
+          "layer": 2,
+          "text": "menu.copyright",
+          "size": [ "default", 10 ],
+          "max_size": [ "100%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }      
+      },
+      {
+        "development_version": {
+          "type": "label",
+          "color": "$main_header_text_color",
+          "layer": 2,
+          "text": "#development_version",
+          "size": [ "default", 10 ],
+          "max_size": [ "100%", "100%" ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "bindings": [
+            {
+              "binding_name": "#development_version"
+            }
+          ],
+          "ignored": "$is_publish"
+        }
+      },
+      {
+        "version": {
+          "type": "label",
+          "color": "$main_header_text_color",
+          "layer": 2,
+          "text": "#version",
+          "size": [ "default", 10 ],
+          "max_size": [ "100%", "100%" ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "#version"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "test0": {
+    "type": "label",
+    "text": "bitch",
+    "font_type": "sans-serif",
+    "font_size": "default",
+    "anchor_from": "top_left",
+    "font_scale_factor": 1.0,
+    "offset": [20, 20],
+    "enable_profanity_filter": true,
+    "color": [0.0, 0.5, 0.5]
+  },
+
+  "test5": {
+    "type": "label",
+    "text": "My text",
+    "font_type": "sans-serif",
+    "anchor_from": "top_right",
+    "offset": [-20, 10],
+    "color": [0.2, 0.75, 1]
+  },
+
+  "test1": {
+    "type": "image",
+    "size": [128, 128],
+    "uv": [7, 8],
+    "uv_size": [16, 16],
+    "offset": [0, 0],
+    "bilinear": false,
+    "anchor_from": "top_middle",
+    "texture": "textures/gift_square.png"
+  },
+
+  "test10": {
+    "type": "image",
+    "size": [400, 60],
+    "anchor_from": "left_middle",
+    "texture": "textures/button_borderless_light.png",
+    "nineslice": 1
+  },
+
+  // "supertest0": {
+  //   "type": "label",
+  //   "text": "super test0",
+  //   "color": "red",
+  //   "anchor_from": "bottom_left"
+  // },
+
+  // "supertest1@supertest0": {
+  //   "color": "blue",
+  //   "offset": [0, -20]
+  // },
+
+  "test3": {
+    "type": "image",
+    "size": [100, 210.5],
+    "offset": [0, -40],
+    "anchor_from": "bottom_middle",
+    "texture": "textures/promo_creeper.png",
+    "layer": 10
+  },
+
+  "test4": {
+    "type": "image",
+    "size": [370, 344],
+    "offset": [0, 0],
+    "anchor_from": "top_left",
+    "texture": "textures/emote_wheel_base.png",
+    "ignored": false
+  },
+
+  "panel0": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "test1": {
+          "type": "image",
+          "size": [64, 64],
+          "texture": "textures/gift_square.png"
+        }
+      },
+      {
+        "space": {
+          "type": "panel",
+          "size": [10, "100%"]
+        }
+      },
+      {
+        "test2": {
+          "type": "image",
+          "size": [64, 64],
+          "texture": "textures/gift_square.png"
+        }
+      }
+    ]
+  },
+
+  "test2": {
+    "type": "button",
+    "size": ["50% - 200px", 60],
+    "default_state": "default",
+    "hover_state": "hover",
+    "pressed_state": "pressed",
+    "locked_state": "locked",
+    "anchor_from": "center",
+    "offset": [0, -250],
+    "enabled": true,
+    "$allow_clipping": false,
+    "allow_clipping": "$allow_clipping",
+    "button_mappings": [
+      {
+        "from_button_id": "button.button_0",
+        "to_button_id": "button.menu_other",
+        "mapping_type": "pressed"
+      },
+      {
+        "ignored": true,
+        "from_button_id": "button.button_0",
+        "to_button_id": "button.console_log_test1",
+        "mapping_type": "double_pressed"
+      }
+    ],
+    // "visible": false,
+    // "ignored": true,
+    "controls": [
+      {
+        "default": {
+          "type": "panel",
+          "controls": [
+            {
+              "test10": {
+                "type": "image",
+                "size": ["100%", "100%"],
+                "texture": "textures/button_borderless_light.png",
+                "nineslice": 1
+              }
+            },
+            {
+              "subtest1": {
+                "type": "label",
+                "text": "menu.play",
+                "offset": [0, 0],
+                "color": "$light_button_default_text_color"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hover": {
+          "type": "panel",
+          "controls": [
+            {
+              "test10": {
+                "type": "image",
+                "size": ["100%", "100%"],
+                "texture": "textures/button_borderless_lighthover.png",
+                "nineslice": 1
+              }
+            },
+            {
+              "subtest1": {
+                "type": "label",
+                "text": "menu.play",
+                "offset": [0, 0],
+                "color": "$light_button_hover_text_color"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "pressed": {
+          "type": "panel",
+          "controls": [
+            {
+              "test10": {
+                "type": "image",
+                "size": ["100%", "100%"],
+                "texture": "textures/button_borderless_lightpressed.png",
+                "nineslice": 1
+              }
+            },
+            {
+              "subtest1": {
+                "type": "label",
+                "text": "menu.play",
+                "offset": [0, 0],
+                "color": "$light_button_pressed_text_color"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "locked": {
+          "type": "panel",
+          "controls": [
+            {
+              "subtext0": {
+                "type": "custom",
+                "renderer": "fill",
+                "color": "purple"
+              }
+            },
+            {
+              "subtest1": {
+                "type": "label",
+                "text": "menu.play",
+                "offset": [0, 0],
+                "color": "$light_button_locked_text_color"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
